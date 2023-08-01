@@ -3,6 +3,7 @@ package com.bolsaideas.springboot.springboot.form.app.models.domain;
 import jakarta.validation.constraints.NotEmpty;
 
 public class Usuario {
+
     private String identificador;
 
     @NotEmpty
