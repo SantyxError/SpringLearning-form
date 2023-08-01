@@ -8,16 +8,16 @@ public class Usuario {
 
     private String identificador;
 
-    @NotEmpty(message = "El nombre no puede estar vacio")
+    @NotEmpty
     private String nombre;
-    @NotEmpty(message = "El apellido no puede estar vacio")
+    @NotEmpty
     private String apellido;
-    @NotEmpty(message = "El username no puede estar vacio y debe ocupar entre 3 y 8 caracteres")
+    @NotEmpty
     @Size(min = 3, max = 8)
     private String username;
-    @NotEmpty(message = "El password no puede estar vacio")
+    @NotEmpty
     private String password;
-    @NotEmpty(message = "El email no puede estar vacio")
+    @NotEmpty
     @Email
     private String email;
 
