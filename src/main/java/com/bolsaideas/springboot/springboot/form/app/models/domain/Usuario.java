@@ -1,6 +1,7 @@
 package com.bolsaideas.springboot.springboot.form.app.models.domain;
 
 import com.bolsaideas.springboot.springboot.form.app.validation.IdentificadorRegex;
+import com.bolsaideas.springboot.springboot.form.app.validation.Requerido;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -15,7 +16,8 @@ public class Usuario {
     //@NotEmpty
     private String nombre;
 
-    @NotEmpty
+    //@NotEmpty
+    @Requerido
     private String apellido;
 
     @NotBlank
@@ -25,7 +27,8 @@ public class Usuario {
     @NotEmpty
     private String password;
 
-    @NotEmpty
+    //@NotEmpty
+    @Requerido
     @Email
     private String email;
 
