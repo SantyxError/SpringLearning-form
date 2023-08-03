@@ -2,10 +2,7 @@ package com.bolsaideas.springboot.springboot.form.app.models.domain;
 
 import com.bolsaideas.springboot.springboot.form.app.validation.IdentificadorRegex;
 import com.bolsaideas.springboot.springboot.form.app.validation.Requerido;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 
 public class Usuario {
 
@@ -31,6 +28,19 @@ public class Usuario {
     @Requerido
     @Email
     private String email;
+
+    @Min(5)
+    @Max(5000)
+    @NotNull
+    private Integer cuenta;
+
+    public Integer getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(Integer cuenta) {
+        this.cuenta = cuenta;
+    }
 
     public String getIdentificador() {
         return identificador;
