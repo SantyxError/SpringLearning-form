@@ -3,7 +3,7 @@ package com.bolsaideas.springboot.springboot.form.app.models.domain;
 import com.bolsaideas.springboot.springboot.form.app.validation.IdentificadorRegex;
 import com.bolsaideas.springboot.springboot.form.app.validation.Requerido;
 import jakarta.validation.constraints.*;
-import org.springframework.format.annotation.DateTimeFormat;
+//import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -39,7 +39,7 @@ public class Usuario {
 
     @Future
     @NotNull
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    //@DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date fechaNacimiento;
 
     public Date getFechaNacimiento() {
