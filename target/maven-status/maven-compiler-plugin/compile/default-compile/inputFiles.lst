@@ -1,4 +1,5 @@
 /home/belike/sandbox/Cursos/Spring/Udemy/SpringLearning-form/src/main/java/com/bolsaideas/springboot/springboot/form/app/validation/IdentificadorRegex.java
+/home/belike/sandbox/Cursos/Spring/Udemy/SpringLearning-form/src/main/java/com/bolsaideas/springboot/springboot/form/app/editors/NombreMayusculaEditor.java
 /home/belike/sandbox/Cursos/Spring/Udemy/SpringLearning-form/src/main/java/com/bolsaideas/springboot/springboot/form/app/validation/IdentificadorRegexValidador.java
 /home/belike/sandbox/Cursos/Spring/Udemy/SpringLearning-form/src/main/java/com/bolsaideas/springboot/springboot/form/app/validation/RequeridoValidador.java
 /home/belike/sandbox/Cursos/Spring/Udemy/SpringLearning-form/src/main/java/com/bolsaideas/springboot/springboot/form/app/SpringBootFormApplication.java
