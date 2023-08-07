@@ -1,6 +1,7 @@
 package com.bolsaideas.springboot.springboot.form.app.controllers;
 
 import com.bolsaideas.springboot.springboot.form.app.editors.NombreMayusculaEditor;
+import com.bolsaideas.springboot.springboot.form.app.models.domain.Pais;
 import com.bolsaideas.springboot.springboot.form.app.models.domain.Usuario;
 import com.bolsaideas.springboot.springboot.form.app.validation.UsuarioValidador;
 import jakarta.validation.Valid;
@@ -41,6 +42,19 @@ public class FormController {
 
 		binder.registerCustomEditor(String.class, "nombre", new NombreMayusculaEditor());
 	}
+
+	@ModelAttribute("listaPaises")
+	public List<Pais> listaPaises() {
+		return Arrays.asList(
+				new Pais(1, "ES", "España"),
+				new Pais(2, "MX", "Mexico"),
+				new Pais(3, "CL", "Chile"),
+				new Pais(4, "AR", "Argentina"),
+				new Pais(5, "PE", "Perú"),
+				new Pais(6, "CO", "Colombia"),
+				new Pais(7, "VE", "Venezuela"));
+	}
+
 
 	@ModelAttribute("paises")
 	public List<String> paises() {

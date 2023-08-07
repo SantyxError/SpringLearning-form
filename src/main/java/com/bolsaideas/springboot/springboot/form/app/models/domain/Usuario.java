@@ -2,6 +2,7 @@ package com.bolsaideas.springboot.springboot.form.app.models.domain;
 
 import com.bolsaideas.springboot.springboot.form.app.validation.IdentificadorRegex;
 import com.bolsaideas.springboot.springboot.form.app.validation.Requerido;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -49,14 +50,14 @@ public class Usuario {
 	//@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date fechaNacimiento;
 
-	@NotEmpty
-	private String pais;
+	@Valid
+	private Pais pais;
 
-	public String getPais() {
+	public Pais getPais() {
 		return pais;
 	}
 
-	public void setPais(String pais) {
+	public void setPais(Pais pais) {
 		this.pais = pais;
 	}
 
