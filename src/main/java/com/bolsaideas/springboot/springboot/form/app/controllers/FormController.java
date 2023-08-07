@@ -1,6 +1,7 @@
 package com.bolsaideas.springboot.springboot.form.app.controllers;
 
 import com.bolsaideas.springboot.springboot.form.app.editors.NombreMayusculaEditor;
+import com.bolsaideas.springboot.springboot.form.app.editors.PaisPropertyEditor;
 import com.bolsaideas.springboot.springboot.form.app.models.domain.Pais;
 import com.bolsaideas.springboot.springboot.form.app.models.domain.Usuario;
 import com.bolsaideas.springboot.springboot.form.app.services.PaisService;
@@ -36,6 +37,9 @@ public class FormController {
 	@Autowired
 	private PaisService paisService;
 
+	@Autowired
+	private PaisPropertyEditor paisEditor;
+
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
 		binder.addValidators(validador);
@@ -45,6 +49,8 @@ public class FormController {
 		binder.registerCustomEditor(Date.class, "fechaNacimiento", new CustomDateEditor(dateFormat, true));
 
 		binder.registerCustomEditor(String.class, "nombre", new NombreMayusculaEditor());
+
+		binder.registerCustomEditor(Pais.class, "pais", paisEditor);
 	}
 
 	@ModelAttribute("listaPaises")

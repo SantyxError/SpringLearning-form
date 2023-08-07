@@ -1,8 +1,11 @@
 com/bolsaideas/springboot/springboot/form/app/editors/NombreMayusculaEditor.class
 com/bolsaideas/springboot/springboot/form/app/models/domain/Pais.class
+com/bolsaideas/springboot/springboot/form/app/services/PaisServiceImp.class
 com/bolsaideas/springboot/springboot/form/app/controllers/FormController.class
 com/bolsaideas/springboot/springboot/form/app/SpringBootFormApplication.class
 com/bolsaideas/springboot/springboot/form/app/validation/IdentificadorRegexValidador.class
 com/bolsaideas/springboot/springboot/form/app/validation/IdentificadorRegex.class
 com/bolsaideas/springboot/springboot/form/app/validation/UsuarioValidador.class
 com/bolsaideas/springboot/springboot/form/app/models/domain/Usuario.class
+com/bolsaideas/springboot/springboot/form/app/services/PaisService.class
+com/bolsaideas/springboot/springboot/form/app/editors/PaisPropertyEditor.class
