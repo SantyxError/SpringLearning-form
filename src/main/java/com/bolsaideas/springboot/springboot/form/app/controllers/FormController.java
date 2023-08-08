@@ -3,8 +3,10 @@ package com.bolsaideas.springboot.springboot.form.app.controllers;
 import com.bolsaideas.springboot.springboot.form.app.editors.NombreMayusculaEditor;
 import com.bolsaideas.springboot.springboot.form.app.editors.PaisPropertyEditor;
 import com.bolsaideas.springboot.springboot.form.app.models.domain.Pais;
+import com.bolsaideas.springboot.springboot.form.app.models.domain.Role;
 import com.bolsaideas.springboot.springboot.form.app.models.domain.Usuario;
 import com.bolsaideas.springboot.springboot.form.app.services.PaisService;
+import com.bolsaideas.springboot.springboot.form.app.services.RoleService;
 import com.bolsaideas.springboot.springboot.form.app.validation.UsuarioValidador;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +41,9 @@ public class FormController {
 	private PaisService paisService;
 
 	@Autowired
+	private RoleService roleService;
+
+	@Autowired
 	private PaisPropertyEditor paisEditor;
 
 	@InitBinder
@@ -70,6 +75,11 @@ public class FormController {
 		roles.put("ROLE_USER", "Usuario");
 		roles.put("ROLE_MODERATOR", "Moredador");
 		return roles;
+	}
+
+	@ModelAttribute("listaRoles")
+	public List<Role> listaRoles() {
+		return this.roleService.listar();
 	}
 
 	@ModelAttribute("listaPaises")
