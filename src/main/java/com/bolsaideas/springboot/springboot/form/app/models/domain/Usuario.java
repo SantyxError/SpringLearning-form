@@ -2,7 +2,6 @@ package com.bolsaideas.springboot.springboot.form.app.models.domain;
 
 import com.bolsaideas.springboot.springboot.form.app.validation.IdentificadorRegex;
 import com.bolsaideas.springboot.springboot.form.app.validation.Requerido;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -13,6 +12,7 @@ import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
 import java.util.Date;
+import java.util.List;
 
 public class Usuario {
 
@@ -52,6 +52,9 @@ public class Usuario {
 
 	@NotNull
 	private Pais pais;
+
+	@NotEmpty
+	private List<String> roles;
 
 	public Pais getPais() {
 		return pais;
@@ -123,5 +126,13 @@ public class Usuario {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
 	}
 }
