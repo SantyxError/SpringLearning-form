@@ -88,6 +88,11 @@ public class FormController {
 		return this.roleService.listar();
 	}
 
+	@ModelAttribute("genero")
+	public List<String> genero() {
+		return Arrays.asList("Hombre", "Mujer");
+	}
+
 	@ModelAttribute("listaPaises")
 	public List<Pais> listaPaises() {
 		return paisService.listar();
