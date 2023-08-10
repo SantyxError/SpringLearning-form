@@ -1,7 +1,5 @@
 package com.bolsaideas.springboot.springboot.form.app.models.domain;
 
-import jakarta.validation.constraints.NotEmpty;
-
 public class Pais {
 	private Integer id;
 
@@ -41,5 +39,10 @@ public class Pais {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+
+	@Override public String toString() {
+		return this.id.toString();
 	}
 }
