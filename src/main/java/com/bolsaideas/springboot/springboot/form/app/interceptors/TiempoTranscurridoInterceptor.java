@@ -17,19 +17,25 @@ public class TiempoTranscurridoInterceptor implements HandlerInterceptor {
 	private static final Logger logger = LoggerFactory.getLogger(TiempoTranscurridoInterceptor.class);
 
 	@Override public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
 		if (handler instanceof HandlerMethod) {
 			HandlerMethod metodo = (HandlerMethod) handler;
-			logger.info("es un método del controlador: " + metodo.getMethod().getName());
+			logger.info("Es un método del controlador: " + metodo.getMethod().getName());
 		}
 
-		logger.info("TiempoTranscurridoInterceptor: preGandle() entrando...");
-		logger.info("Interceptando: " + handler);
+		logger.info("TiempoTranscurridoInterceptor: preHandle() entrando...");
+		logger.info("Interceptando " + handler);
+
 		long tiempoInicio = System.currentTimeMillis();
 		request.setAttribute("tiempoInicio", tiempoInicio);
 
 		Random random = new Random();
-		Integer demora = random.nextInt(500);
+		Integer demora = random.nextInt(100);
 		Thread.sleep(demora);
+
+		if (request.getMethod().equalsIgnoreCase("post")) {
+			return true;
+		}
 
 		return true;
 	}
